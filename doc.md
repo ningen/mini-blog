@@ -4,7 +4,12 @@ marp: true
 
 # Cloudflare Pages * hono(x) * microCMSで簡単なブログを作ってみた
 
-@ningen
+
+---
+
+![エビフライトライアングル](./generated_image.jpg) 
+
+↑生成AIでさっきのタイトルを投げて画像を生成した
 
 ---
 

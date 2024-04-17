@@ -10,6 +10,7 @@ type Props = {
 export const Content = (props: Props) => {
     const { content } = props
     return <>
+        { content.eyecatch ? <img src={content.eyecatch.url}></img> : <></>}
         <h1>{ content.title }</h1>
         <div dangerouslySetInnerHTML={{ __html: content.content }}></div>
     </>
