@@ -1,14 +1,19 @@
-import build from '@hono/vite-cloudflare-pages'
-import devServer from '@hono/vite-dev-server'
-import adapter from '@hono/vite-dev-server/cloudflare'
-import { defineConfig } from 'vite'
+import adapter from "@hono/vite-dev-server/cloudflare";
+import { defineConfig } from "vite";
+import honox from "honox/vite";
+import pages from "@hono/vite-cloudflare-pages";
 
-export default defineConfig({
-  plugins: [
-    build(),
-    devServer({
-      adapter,
-      entry: 'src/index.tsx'
-    })
-  ]
-})
+
+export default defineConfig(async () => {
+  return {
+    plugins: [
+      honox({
+        devServer: {
+          entry: "./app/server.ts",
+          adapter
+        },
+      }),
+      pages(),
+    ],
+  };
+});

@@ -1,6 +1,6 @@
 import { jsxRenderer } from 'hono/jsx-renderer'
 
-export const renderer = jsxRenderer(({ children, title }) => {
+export default jsxRenderer(({ children, title }) => {
   return (
     <html>
       <head>
@@ -9,7 +9,6 @@ export const renderer = jsxRenderer(({ children, title }) => {
       </head>
       <body>
         <header><a href="/">Ningen mini blog</a></header>
-        <h1>{ title }</h1>
         { children }
       </body>
     </html>
