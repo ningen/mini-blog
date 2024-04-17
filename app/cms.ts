@@ -15,7 +15,7 @@ export type Category = {
     revisedAt: string,
     title: string,
     content: string,
-    eyecatch: {
+    eyecatch?: {
       url: string,
       height: number,
       width: number
