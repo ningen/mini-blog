@@ -7,7 +7,9 @@
     "deploy": "$npm_execpath run build && wrangler pages deploy dist"
   },
   "dependencies": {
-    "hono": "^4.2.3"
+    "hono": "^4.2.3",
+    "microcms-js-sdk": "^3.1.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240403.0",

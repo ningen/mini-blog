@@ -4,10 +4,14 @@ export const renderer = jsxRenderer(({ children, title }) => {
   return (
     <html>
       <head>
-        <link href="/static/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"></link>
         <title>{title}</title>
       </head>
-      <body>{children}</body>
+      <body>
+        <header><a href="/">Ningen mini blog</a></header>
+        <h1>{ title }</h1>
+        { children }
+      </body>
     </html>
   )
 })
